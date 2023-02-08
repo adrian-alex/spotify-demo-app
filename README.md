@@ -2,7 +2,7 @@
 # Spotify App
 
 This project is the Flutter implementation of a demo app using the Spotify API.
-It uses the Bloc lib for state management.
+It uses the Bloc lib for state management and dependency injection.
 
 Try it -> https://spotify-app-2342.web.app/#/
 ## Getting Started
@@ -40,8 +40,8 @@ lib/
 |- screens     -> all app screens
 |- shared      -> shared widgets and constants
 |- style       -> app styles 
-|- app.dart    -> main app styling and entry point
-|- main.dart   -> nothing to configure
+|- app.dart    -> main app styling and main widget
+|- main.dart   -> the entry point, injection of dependencies
 ```
 **The data_repo**
 ```
@@ -58,10 +58,9 @@ src/
 adrian@atomsoftworks.com
 
 ### Future work
-- implement Data Repo API calls caching for (e.g) offline support
-- implement unit tests and functional tests for the [HomePageBloc] implementation as it the core of the app (so far!)
-- implement lazy loading of results 
-- implement a tablet UX
-- improve the UI based on a UX design (exact values from a Figma/Invision/Zeplin design)
-- add the correct font-family 
-- 
+- Implement Data Repo API calls caching for (e.g) offline support
+- Implement unit tests and functional tests for the [HomePageBloc] implementation as it the core of the app (so far!)
+- Implement lazy loading of results 
+- Implement a tablet UX
+- Improve the UI based on a UX design (exact values from a Figma/Invision/Zeplin design)
+- Add the correct font-family
