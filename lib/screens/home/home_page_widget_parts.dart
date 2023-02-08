@@ -24,7 +24,7 @@ Widget _bodyWidget(BuildContext context) => isMobile(context)
 
 /// The actual layout once is loading
 Widget _layoutWidget(BuildContext context) => Padding(
-      padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+      padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -48,6 +48,7 @@ Widget get _titleWidget => Padding(
     );
 
 /// The search input field
+/// Will autofocus only on web
 Widget _inputFieldWidget({required BuildContext context}) => RawKeyboardListener(
       focusNode: _searchTextNode,
       onKey: (key) {
@@ -59,6 +60,7 @@ Widget _inputFieldWidget({required BuildContext context}) => RawKeyboardListener
       },
       child: TextField(
         controller: _searchController,
+        autofocus: kIsWeb,
         style: const TextStyle(color: Colors.black),
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.all(20),

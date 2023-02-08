@@ -18,7 +18,11 @@ class ColorAnimatedBackground extends StatelessWidget {
     return Material(
       child: Stack(
         children: <Widget>[
-          Positioned.fill(child: AnimatedBackground()),
+          Positioned.fill(
+            child: Container(
+              color: Colors.black,
+            ),
+          ),
           const Positioned.fill(child: Particles(30)),
           child,
         ],
@@ -131,53 +135,4 @@ class ParticlePainter extends CustomPainter {
 
   @override
   bool shouldRepaint(CustomPainter oldDelegate) => true;
-}
-
-enum _ColorTween { color1, color2 }
-
-class AnimatedBackground extends StatelessWidget {
-  AnimatedBackground({super.key});
-  final tween = MovieTween()
-    ..tween(
-      _ColorTween.color1,
-      Colors.black.tweenTo(Colors.black54),
-      duration: 10.seconds,
-    )
-    ..tween(
-      _ColorTween.color2,
-      Colors.black.tweenTo(Colors.black87),
-      duration: 10.seconds,
-    );
-  @override
-  Widget build(BuildContext context) {
-    return MirrorAnimationBuilder<Movie>(
-      tween: tween,
-      duration: tween.duration,
-      builder: (context, child, value) {
-        return Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [child.get<Color>(_ColorTween.color1), child.get<Color>(_ColorTween.color2)],
-            ),
-          ),
-        );
-      },
-    );
-  }
-}
-
-class CenteredText extends StatelessWidget {
-  const CenteredText({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-        child: Text(
-      "Welcome",
-      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w200),
-      textScaleFactor: 4,
-    ));
-  }
 }

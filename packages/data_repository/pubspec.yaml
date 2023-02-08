@@ -22,6 +22,9 @@ dependencies:
   # used to transform models into JSON and vice-versa
   json_serializable: ^6.3.1
 
+  # https://pub.dev/packages/intl
+  intl: ^0.18.0
+
   # the actual flutter framework, needed for json_serializable and shared_preferences to work
   flutter:
     sdk: flutter

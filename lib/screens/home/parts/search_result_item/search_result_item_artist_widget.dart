@@ -21,12 +21,14 @@ class SearchResultItemArtistWidget extends StatelessWidget {
               height: 50,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: NetworkImage(
-                    artist.avatar,
-                  ),
-                  fit: BoxFit.cover,
-                ),
+                image: artist.avatar == null
+                    ? null
+                    : DecorationImage(
+                        image: NetworkImage(
+                          artist.avatar!,
+                        ),
+                        fit: BoxFit.cover,
+                      ),
               ),
             ),
             const SizedBox(

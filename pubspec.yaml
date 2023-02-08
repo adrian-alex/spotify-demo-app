@@ -23,10 +23,6 @@ dependencies:
   # used by the UI to handle state
   flutter_bloc: ^8.1.1
 
-  # https://pub.dev/packages/rive
-  # used to render Rive animations
-  rive: ^0.10.1
-
   # https://pub.dev/packages/go_router
   # used as a router lib
   go_router: ^5.1.5
