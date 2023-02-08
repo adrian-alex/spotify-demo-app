@@ -1,5 +1,5 @@
 
-# Spotify App
+# Spotify Demo App
 
 This project is the Flutter implementation of a demo app using the Spotify API.
 It uses the Bloc lib for state management and dependency injection.
