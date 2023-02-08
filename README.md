@@ -1,16 +1,67 @@
-# spotify_demo_app
 
-A new Flutter project.
+# Pokemon App
 
+This project is the Flutter implementation of an example app usinthe Spotify API
+It uses the Bloc lib for state management
+
+Try it -> https://spotify-app-2342.web.app/#/
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Clone the repo locally and run:
 
-A few resources to get you started if this is your first Flutter project:
+```
+flutter pub get
+```
+Then navigate to 'packages/data_repository' and run:
+```
+flutter pub get
+```
+And finally:
+```
+flutter run -d chrome
+```
+That's it!
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+While developing if you need to update the data models you can run:
+```
+flutter pub run build_runner build
+```
+Or run a script in 'packages/data_repository':
+```
+packages/data_repository/.serialize_models.sh
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Folder Structure
+Here is an overview of the folder structure of the project
+**The main app**
+```
+lib/
+|- navigation  -> app navigation Bloc 
+|- screens     -> all app screens
+|- shared      -> shared widgets and constants
+|- style       -> app styles 
+|- app.dart    -> main app styling and entry point
+|- main.dart   -> nothing to configure
+```
+**The data_repo**
+```
+src/
+|- api                   -> the API implementation code
+|- business              -> the business logic
+|- models                -> the business models
+|- storage               -> the Local Storage implementation code 
+|- data_repository.dart  -> the ONLY interface to be imported by the app
+
+```
+
+## For questions please message Adrian A.
+adrian@atomsoftworks.com
+
+### Future work
+- implement Data Repo API calls caching for (e.g) offline support
+- implement unit tests and functional tests for the [HomePageBloc] implementation as it the core of the app (so far!)
+- implement lazy loading of results 
+- implement a tablet UX
+- improve the UI based on a UX design (exact values from a Figma/Invision/Zeplin design)
+- add the correct font-family 
+- 

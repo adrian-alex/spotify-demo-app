@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-const Color pageBackgroundColour = Color(0xffF5F7FF);
+final Color pageBackground = Colors.black.withOpacity(0.8);
 
 bool isMobile(BuildContext context) => MediaQuery.of(context).size.width < 700;
 

@@ -1,5 +1,6 @@
 import 'package:data_repository/src/models/album_model.dart';
 import 'package:flutter/material.dart';
+import 'package:spotify_demo_app/style/style.dart';
 
 /// The widget that displays an [Album] as a card in a grid.
 class SearchResultItemAlbumWidget extends StatelessWidget {
@@ -38,7 +39,7 @@ class SearchResultItemAlbumWidget extends StatelessWidget {
             _padding(
               Row(
                 children: [
-                  Text((album.type == AlbumType.single ? "${_capitalize(album.type.name)} · " : ""), style: _subtitleStyle),
+                  Text((album.type == AlbumType.single ? "${album.type.name.capitalize()} · " : ""), style: _subtitleStyle),
                   Text(album.year, style: _subtitleStyle),
                 ],
               ),
@@ -53,7 +54,4 @@ class SearchResultItemAlbumWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 2),
         child: child,
       );
-
-  /// FIXME move to utils
-  String _capitalize(String s) => s[0].toUpperCase() + s.substring(1);
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_demo_app/style/style.dart';
 
 /// A widget that will mimic a mobile device UI on web
 ///
@@ -11,7 +12,6 @@ class WhiteCard extends StatelessWidget {
   static const double _cardMargin = 35;
   static const double _maxCardWidth = 470;
   static const double _borderRadius = 40;
-  static final Color _pageBackground = Colors.black.withOpacity(0.8);
 
   final BoxDecoration _boxDecoration = const BoxDecoration(
     color: Colors.white,
@@ -23,7 +23,7 @@ class WhiteCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: _pageBackground,
+      color: pageBackground,
       child: Align(
         alignment: Alignment.center,
         child: Container(
