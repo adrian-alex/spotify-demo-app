@@ -1,8 +1,8 @@
 
-# Pokemon App
+# Spotify App
 
-This project is the Flutter implementation of an example app usinthe Spotify API
-It uses the Bloc lib for state management
+This project is the Flutter implementation of a demo app using the Spotify API.
+It uses the Bloc lib for state management.
 
 Try it -> https://spotify-app-2342.web.app/#/
 ## Getting Started
